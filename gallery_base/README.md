@@ -55,3 +55,4 @@ Unfortunately with limited time to create the project at late notice here are th
 - A UI test suite
 - Dependency injection (services / gateway (providers))
 - Better Hero implementation to animate on first load of detail view image (currently only does so after the image has already been loaded into memory and you are tapping on the thumbnail again)
+- Better Caching, the images are cached in memory once loaded by the widget to an extent but the data supporting the views are not. Implementing a cachingfor the data within the application and adding an event flag to pull the new data can be added to the eventpulllist event
