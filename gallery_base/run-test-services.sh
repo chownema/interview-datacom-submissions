@@ -1,0 +1,1 @@
+flutter pub run test lib/service/test_album_service.dart
