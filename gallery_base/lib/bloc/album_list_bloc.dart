@@ -34,7 +34,10 @@ class AlbumListBloc extends Bloc<EventBase, StateBase> {
           } on SocketException catch (e) {
             yield ErrorState(message: 'No Internet, please try reconnect and tap to refresh');
             return;
+          } catch (e) {
+            throw e;
           }
+
           this.album_list = UserService.mapUserDataToAlbum(this.user_list, this.album_list);
           yield GetAlbumListState(this.album_list);
           break;

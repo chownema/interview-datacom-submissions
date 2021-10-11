@@ -31,6 +31,8 @@ class AlbumBloc extends Bloc<EventBase, StateBase> {
           } on SocketException catch (e) {
             yield ErrorState(message: 'No Internet, please try reconnect and tap to refresh');
             return;
+          } catch (e) {
+            throw e;
           }
           List<Photo> photoFilteredList = this.photoList.where((e) => e.albumId == pEvent.id).toList();
           yield GetAlbumThumbnailListState(photoList=photoFilteredList);
