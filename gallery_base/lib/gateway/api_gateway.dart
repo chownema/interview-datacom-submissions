@@ -8,7 +8,7 @@ class ApiGateway {
   static final album_ext = 'albums';
   static final user_ext = 'users';
   static final photo_ext = 'photos';
-  static final timeout = 5;
+  static final timeout = 30;
 
   static Future<String> getUserlist() async {
     try {
